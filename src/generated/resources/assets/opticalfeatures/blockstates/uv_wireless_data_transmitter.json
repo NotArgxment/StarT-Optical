@@ -1,0 +1,28 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "opticalfeatures:block/machine/uv_wireless_data_transmitter",
+      "x": 90
+    },
+    "facing=east": {
+      "model": "opticalfeatures:block/machine/uv_wireless_data_transmitter",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "opticalfeatures:block/machine/uv_wireless_data_transmitter"
+    },
+    "facing=south": {
+      "model": "opticalfeatures:block/machine/uv_wireless_data_transmitter",
+      "y": 180
+    },
+    "facing=up": {
+      "gtceu:z": 180,
+      "model": "opticalfeatures:block/machine/uv_wireless_data_transmitter",
+      "x": 270
+    },
+    "facing=west": {
+      "model": "opticalfeatures:block/machine/uv_wireless_data_transmitter",
+      "y": 270
+    }
+  }
+}
