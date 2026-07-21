@@ -1,2 +1,1 @@
-StarT Optical Features
-
+A simplified version of [GTM Extended Features](https://github.com/NotArgxment/GTM-Extended-Features) that only has Wireless Optical Hatches and Expanded Data Hatches, this version **ONLY** works with the current [Star Technology GTCEu Fork](https://github.com/StarT-Dev-Team/GTM-StarT-Fork)
