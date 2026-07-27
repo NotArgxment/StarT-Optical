@@ -30,15 +30,4 @@ public class OpticalFeaturesGTAddon implements IGTAddon {
         return OpticalFeatures.MOD_ID;
     }
 
-    @Override
-    public void registerTagPrefixes() {
-    }
-
-    @Override
-    public void addRecipes(Consumer<FinishedRecipe> provider) {
-    }
-
-    @Override
-    public void registerElements() {
-    }
 }
