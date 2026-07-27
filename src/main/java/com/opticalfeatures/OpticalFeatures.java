@@ -31,10 +31,11 @@ public class OpticalFeatures {
 
     public static RegistryEntry<CreativeModeTab> OPTICAL_TAB = OpticalRegister
             .defaultCreativeTab(OpticalFeatures.MOD_ID, builder -> builder
-                            .displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator(
-                                    OpticalFeatures.MOD_ID, OpticalRegister))
-                            .title(OpticalRegister.addLang("itemGroup", OpticalFeatures.id("creative_tab"),
-                                    "StarT - Optical Features"))
+                            .displayItems(new GTCreativeModeTabs.RegistrateDisplayItemsGenerator(OpticalFeatures.MOD_ID, OpticalRegister))
+                            .title(
+                                OpticalRegister.addLang("itemGroup",
+                                                        OpticalFeatures.id("creative_tab"), 
+                                                        "StarT - Optical Features"))
                             .icon(OpticalMachines.UV_DATA_ACCESS_HATCH::asStack)
                             .build())
             .register();
@@ -48,13 +49,7 @@ public class OpticalFeatures {
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);
 
-        modEventBus.addListener(this::addMaterialRegistries);
-        modEventBus.addListener(this::addMaterials);
-        modEventBus.addListener(this::modifyMaterials);
-
-        modEventBus.addGenericListener(GTRecipeType.class, this::registerRecipeTypes);
         modEventBus.addGenericListener(MachineDefinition.class, this::registerMachines);
-        modEventBus.addGenericListener(SoundEntry.class, this::registerSounds);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
@@ -74,23 +69,8 @@ public class OpticalFeatures {
         LOGGER.info("God Bless Komaru - Property of Star Technology");
     }
 
-    private void addMaterialRegistries(MaterialRegistryEvent event) {
-        GTCEuAPI.materialManager.createRegistry(OpticalFeatures.MOD_ID);
-    }
-
-    private void addMaterials(MaterialEvent event) {
-    }
-
-    private void modifyMaterials(PostMaterialEvent event) {
-    }
-
-    private void registerRecipeTypes(GTCEuAPI.RegisterEvent<ResourceLocation, GTRecipeType> event) {
-    }
-
     private void registerMachines(GTCEuAPI.RegisterEvent<ResourceLocation, MachineDefinition> event) {
         OpticalMachines.init();
     }
 
-    public void registerSounds(GTCEuAPI.RegisterEvent<ResourceLocation, SoundEntry> event) {
-    }
 }
